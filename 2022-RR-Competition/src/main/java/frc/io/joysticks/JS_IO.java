@@ -153,7 +153,7 @@ public class JS_IO {
         btnHoldZero = new Button(rightJoystick, 5);    //Rotate to 0 hdg and only apply fwd/rev
         btnHold180 = new Button(rightJoystick, 6);     //Rotate to 180 hdg and only apply fwd/rev
 
-        // snorfler buttons
+        // Snorfler buttons
         btnSnorfle.setButton(coJoystick, 3);
         btnRejectSnorfle.setButton(coJoystick, 5);
         btnBadColor.setButton(coJoystick, 9);
