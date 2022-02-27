@@ -158,7 +158,7 @@ public class JS_IO {
         btnRejectSnorfle.setButton(coJoystick, 5);
         btnBadColor.setButton(coJoystick, 9);
         
-        // shooting buttons
+        // Shooting buttons
         axGoalSel.setAxis(coJoystick, 3);
         btnFire.setButton(coJoystick, 1);
         btnRejectLeft.setButton(coJoystick, 4);

@@ -104,7 +104,7 @@ public class Snorfler {
 
         if ((btnSnorfle.isDown() || reqsnorfDrvAuto) && state == 0)  state = 1; // Starts the state machine
         if ((btnSnorfle.isUp() && !reqsnorfDrvAuto) && state != 0) state = 0;
-        if ((btnRejectSnorfle.isDown() || ballRejHoldOut) && state == 2)  state = 3; //Start rejection
+        if ((btnRejectSnorfle.isDown() || ballRejHoldOut) && state == 2)  state = 3; // Start rejection
         if (colorString.equals(enemyColor)) ballRejHoldOut = true;
         if (snorfTimer.hasExpired(1.0,ballRejHoldOut)) ballRejHoldOut = false;
         if (btnRejectSnorfle.isUp() && !ballRejHoldOut && state == 4) state = 0; // Goes back to off
