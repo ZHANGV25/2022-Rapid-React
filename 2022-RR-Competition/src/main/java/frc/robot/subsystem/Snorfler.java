@@ -93,11 +93,10 @@ public class Snorfler {
         boolean ballRejHoldOut = false;
 
         //Bad color Btn
-
         if (btnBadColor.isDown()) {
             colorString = enemyColor;
         }
-
+        
         // if button down and auto snorf, snorf ball            
         // if not button, stop snorfling                        
         // if rejecting ball or see enemy color, reject ball    
@@ -105,10 +104,10 @@ public class Snorfler {
 
         if ((btnSnorfle.isDown() || reqsnorfDrvAuto) && state == 0)  state = 1; // Starts the state machine
         if ((btnSnorfle.isUp() && !reqsnorfDrvAuto) && state != 0) state = 0;
-        if (btnRejectSnorfle.isDown())  state = 3;
+        if ((btnRejectSnorfle.isDown() || ballRejHoldOut) && state == 2)  state = 3;
         if (colorString.equals(enemyColor)) ballRejHoldOut = true;
         if (snorfTimer.hasExpired(1.0,ballRejHoldOut)) ballRejHoldOut = false;
-        if (btnRejectSnorfle.isUp() && state == 4 && !ballRejHoldOut) state = 0; // Goes back to off
+        if (btnRejectSnorfle.isUp() && !ballRejHoldOut && state == 4) state = 0; // Goes back to off
 
         smUpdate();
         sdbUpdate();

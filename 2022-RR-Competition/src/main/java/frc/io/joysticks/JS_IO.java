@@ -53,7 +53,7 @@ public class JS_IO {
     // Snorfler
     public static Button btnSnorfle = new Button();    //Toggle snorfling
     public static Button btnRejectSnorfle = new Button();
-    public static Button btnBadColor = new Button(); 
+    public static Button btnBadColor = new Button(); //Test point for ball rejection
 
     // Shooter
     public static Axis axGoalSel = new Axis();          //Slider to select goal, dn is low, up is hi
@@ -148,31 +148,28 @@ public class JS_IO {
         axRightY.setAxis(rightJoystick, 1);
 
         // Drive buttons
-        btnHoldZero.setButton(rightJoystick, 5);
-        btnHold180.setButton(rightJoystick, 6);
-
         btnScaledDrive.setButton(rightJoystick, 3);
         btnInvOrientation.setButton(rightJoystick, 1);
-        btnHoldZero = new Button(leftJoystick, 8);    //Rotate to 0 hdg and only apply fwd/rev
-        btnHold180 = new Button(leftJoystick, 9);     //Rotate to 180 hdg and only apply fwd/rev
+        btnHoldZero = new Button(rightJoystick, 5);    //Rotate to 0 hdg and only apply fwd/rev
+        btnHold180 = new Button(rightJoystick, 6);     //Rotate to 180 hdg and only apply fwd/rev
 
         // snorfler buttons
         btnSnorfle.setButton(coJoystick, 3);
-        btnRejectSnorfle.setButton(coJoystick, 3);
-        btnBadColor.setButton(coJoystick, 3);
+        btnRejectSnorfle.setButton(coJoystick, 5);
+        btnBadColor.setButton(coJoystick, 9);
         
         // shooting buttons
         axGoalSel.setAxis(coJoystick, 3);
         btnFire.setButton(coJoystick, 1);
-        btnRejectLeft.setButton(coJoystick, 6);
-        btnRejectRight.setButton(coJoystick, 7);
-        btnRejectSnorfle.setButton(coJoystick, 6);
+        btnRejectLeft.setButton(coJoystick, 4);
+        btnRejectRight.setButton(coJoystick, 6);
+        btnRejectSnorfle.setButton(coJoystick, 5);
 
         // climbing buttons
-        btnClimb1.setButton(coJoystick, 6);
-        btnClimb2.setButton(coJoystick, 7);
+        btnClimb1.setButton(coJoystick, 11);
+        btnClimb2.setButton(coJoystick, 12);
 
-    // Misc
+        // Misc
         btnRstGyro = new Button(rightJoystick, 6);
         btnRstFeet = new Button(rightJoystick, 7);
         btnRstCoorXY = new Button(rightJoystick, 8);
